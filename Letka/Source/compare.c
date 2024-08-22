@@ -8,8 +8,8 @@ static const double inf = 0.000001;
 /*!
     @brief Function to compare two numbers
 
-    @param [IN] num1 First number to compare
-    @param [IN] num2 Second number to compare
+    @param num1 First number to compare
+    @param num2 Second number to compare
 
     @return 1 if the numbers are equal, 0 if not
 */
