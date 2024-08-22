@@ -1,0 +1,19 @@
+#include "stdio.h"
+#include "math.h"
+
+#include "compare.h"
+
+static const double inf = 0.000001;
+
+/*!
+    @brief Function to compare two numbers
+
+    @param [IN] num1 First number to compare
+    @param [IN] num2 Second number to compare
+
+    @return 1 if the numbers are equal, 0 if not
+*/
+int compare(double num1, double num2) {
+    if(fabs(num1 - num2) <= inf) return 1;
+    return 0;
+}
