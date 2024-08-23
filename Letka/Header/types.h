@@ -32,6 +32,7 @@ typedef struct {
 typedef struct {
     Equation_Param *equation;
     double root1, root2;
+    int count_roots;
 }Test_struct;
 #endif
 

@@ -3,7 +3,6 @@
 
 #include "compare.h"
 
-static const double inf = 0.000001;
 
 /*!
     @brief Function to compare two numbers
@@ -14,6 +13,7 @@ static const double inf = 0.000001;
     @return 1 if the numbers are equal, 0 if not
 */
 int compare(double num1, double num2) {
+    const double inf = 0.000001;
     if(fabs(num1 - num2) <= inf) return 1;
     return 0;
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tester_2ec_0',['tester.c',['../tester_8c.html',1,'']]]
+  ['solver_2ec_0',['solver.c',['../solver_8c.html',1,'']]]
 ];

@@ -4,7 +4,6 @@
 #include "solver.h"
 #include "compare.h"
 
-static const double inf = 0.000001;
 
 /*!
     @brief Solver quadratic equation
@@ -12,6 +11,7 @@ static const double inf = 0.000001;
     @param quadr structure with equation data
 */
 void solver(Equation_Param *quadr) {
+    const double inf = 0.000001;
     double a = quadr->a, b = quadr->b, c = quadr->c;
 
     if (isfinite(a) == 0 || isfinite(b) == 0 || isfinite(c) == 0) {     // if have infinity

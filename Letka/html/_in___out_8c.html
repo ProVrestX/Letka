@@ -95,23 +95,24 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;stdio.h&quot;</code><br />
 <code>#include &quot;math.h&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
 <code>#include &quot;In_Out.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9f33d84826d9825a1af596cc9f337d1b" id="r_a9f33d84826d9825a1af596cc9f337d1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f33d84826d9825a1af596cc9f337d1b">getFlags</a> (int argc, char *args[], FILE **file_input, int *count_test, int *testEn)</td></tr>
-<tr class="memdesc:a9f33d84826d9825a1af596cc9f337d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for flags from console.  <br /></td></tr>
-<tr class="separator:a9f33d84826d9825a1af596cc9f337d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a337ff062a35d23c33ee758ff51c77ddf" id="r_a337ff062a35d23c33ee758ff51c77ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a337ff062a35d23c33ee758ff51c77ddf">getParam</a> (FILE *file_input, Test_struct *quadr, int testEn)</td></tr>
-<tr class="memdesc:a337ff062a35d23c33ee758ff51c77ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input equation data to solve.  <br /></td></tr>
-<tr class="separator:a337ff062a35d23c33ee758ff51c77ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43262cbbd091a3103d412e679ac7b12" id="r_ad43262cbbd091a3103d412e679ac7b12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad43262cbbd091a3103d412e679ac7b12">getFlags</a> (int argc, char *args[], FILE **file_input, int *testEn)</td></tr>
+<tr class="memdesc:ad43262cbbd091a3103d412e679ac7b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for flags from console.  <br /></td></tr>
+<tr class="separator:ad43262cbbd091a3103d412e679ac7b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4701e9f5cba157906c0805c5f8b47d" id="r_a1a4701e9f5cba157906c0805c5f8b47d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a4701e9f5cba157906c0805c5f8b47d">getParam</a> (FILE *file_input, Test_struct *quadr, int testEn)</td></tr>
+<tr class="memdesc:a1a4701e9f5cba157906c0805c5f8b47d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input equation data to solve.  <br /></td></tr>
+<tr class="separator:a1a4701e9f5cba157906c0805c5f8b47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f8ca6d77529961da59d110620bc62fa" id="r_a7f8ca6d77529961da59d110620bc62fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f8ca6d77529961da59d110620bc62fa">printOut</a> (Equation_Param *result_solver)</td></tr>
 <tr class="memdesc:a7f8ca6d77529961da59d110620bc62fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print result solver.  <br /></td></tr>
 <tr class="separator:a7f8ca6d77529961da59d110620bc62fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9f33d84826d9825a1af596cc9f337d1b" name="a9f33d84826d9825a1af596cc9f337d1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f33d84826d9825a1af596cc9f337d1b">&#9670;&#160;</a></span>getFlags()</h2>
+<a id="ad43262cbbd091a3103d412e679ac7b12" name="ad43262cbbd091a3103d412e679ac7b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43262cbbd091a3103d412e679ac7b12">&#9670;&#160;</a></span>getFlags()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,11 +131,6 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">FILE **</td>          <td class="paramname"><span class="paramname"><em>file_input</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>count_test</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -158,14 +154,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a337ff062a35d23c33ee758ff51c77ddf" name="a337ff062a35d23c33ee758ff51c77ddf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a337ff062a35d23c33ee758ff51c77ddf">&#9670;&#160;</a></span>getParam()</h2>
+<a id="a1a4701e9f5cba157906c0805c5f8b47d" name="a1a4701e9f5cba157906c0805c5f8b47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4701e9f5cba157906c0805c5f8b47d">&#9670;&#160;</a></span>getParam()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getParam </td>
+          <td class="memname">int getParam </td>
           <td>(</td>
           <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>file_input</em></span>, </td>
         </tr>
@@ -187,10 +183,11 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">file_input</td><td>file to receive data (if NULL, the input from console) </td></tr>
     <tr><td class="paramname">quadr</td><td>structure with equation data </td></tr>
-    <tr><td class="paramname">testEn</td><td>Enable test </td></tr>
+    <tr><td class="paramname">testEn</td><td>Enable test</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if get data from file, 0 if from console and -1 if end of file (EOF) </dd></dl>
 
 </div>
 </div>

@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "cgimprst",
-  1: "cimst",
-  2: "cgmprs"
+  0: "cgimoprst",
+  1: "cimost",
+  2: "cgmoprs"
 };
 
 var indexSectionNames =

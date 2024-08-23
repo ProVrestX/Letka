@@ -1,9 +1,10 @@
 #include "stdio.h"
 #include "math.h"
+#include "string.h"
 
 #include "In_Out.h"
 
-
+/** @file */
 /*!
     @brief Check for flags from console
 
@@ -14,7 +15,7 @@
 
     @return -1 if have error, 0 if count arguments == 1, 1 if successful
 */
-int getFlags(int argc, char *args[], FILE **file_input, int *count_test, int *testEn){
+int getFlags(int argc, char *args[], FILE **file_input, int *testEn){
     if(argc == 1) return 0;
 
     int pos_arg = 1;
@@ -41,7 +42,6 @@ int getFlags(int argc, char *args[], FILE **file_input, int *count_test, int *te
             }
 
             printf("Open file \"%s\"", args[pos_arg]);
-            fscanf(*file_input, "%d", count_test);
         }
 
         pos_arg++;
@@ -62,8 +62,10 @@ int getFlags(int argc, char *args[], FILE **file_input, int *count_test, int *te
     @param file_input file to receive data (if NULL, the input from console)
     @param quadr structure with equation data
     @param testEn Enable test
+
+    @return 1 if get data from file, 0 if from console and -1 if end of file (EOF)
 */
-void getParam(FILE *file_input, Test_struct *quadr, int testEn) {
+int getParam(FILE *file_input, Test_struct *quadr, int testEn) {
 
     if(file_input == NULL) {
         printf("Enter coof a, b, c: ");
@@ -76,22 +78,28 @@ void getParam(FILE *file_input, Test_struct *quadr, int testEn) {
 
         if(testEn){
             while(getchar() != '\n');
-            printf("Enter roots x1, x2: ");
-            while (scanf("%lf %lf", &quadr->root1, &quadr->root2) != 2) {
+            printf("Enter roots x1, x2, count roots: ");
+            while (scanf("%lf %lf %d", &quadr->root1, &quadr->root2, &quadr->count_roots) != 3) {
                 printf("Try one more\n");
-                printf("nter roots x1, x2: ");
+                printf("nter roots x1, x2, count roots: ");
                 while(getchar() != '\n');
             }
         }
 
         printf("\n");
-        return ;
+        return 0;
     }
 
     else {
-        fscanf(file_input, "%lf %lf %lf", &quadr->equation->a, &quadr->equation->b, &quadr->equation->c);
-        if(testEn) fscanf(file_input, "%lf %lf", &quadr->root1, &quadr->root2);
-        return ;
+        char file_line[256]="";
+        if(fgets(file_line, 256, file_input) == NULL) return -1;
+
+        sscanf(file_line,"%lf %lf %lf %lf %lf %d", &quadr->equation->a, &quadr->equation->b, &quadr->equation->c,
+            &quadr->root1, &quadr->root2, &quadr->count_roots);
+
+        printf("a = %lf, b = %lf, c = %lf\n", quadr->equation->a, quadr->equation->b, quadr->equation->c);
+        printf("root1 = %lf, root2 = %lf, count roots = %d\n", quadr->root1, quadr->root2, quadr->count_roots);
+        return 1;
     }
 }
 
@@ -101,7 +109,7 @@ void getParam(FILE *file_input, Test_struct *quadr, int testEn) {
     @param result_solver structure with equation data
 */
 void printOut(Equation_Param *result_solver) {
-
+    printf(" ");
     switch (result_solver->type_result) {
 
         case HAVE_ERR:

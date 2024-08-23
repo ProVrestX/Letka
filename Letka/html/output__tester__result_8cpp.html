@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Letka_Quadratic: Source/main.c File Reference</title>
+<title>Letka_Quadratic: Source/output_tester_result.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,43 +90,92 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">main.c File Reference</div></div>
+  <div class="headertitle"><div class="title">output_tester_result.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;stdio.h&quot;</code><br />
-<code>#include &quot;stdlib.h&quot;</code><br />
-<code>#include &quot;math.h&quot;</code><br />
-<code>#include &quot;string.h&quot;</code><br />
-<code>#include &quot;types.h&quot;</code><br />
-<code>#include &quot;In_Out.h&quot;</code><br />
-<code>#include &quot;solver.h&quot;</code><br />
-<code>#include &quot;tester.h&quot;</code><br />
+<code>#include &quot;TXLib.h&quot;</code><br />
 <code>#include &quot;output_tester_result.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
-<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabedb7ddff66bcc84daf95acbd549382" id="r_aabedb7ddff66bcc84daf95acbd549382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabedb7ddff66bcc84daf95acbd549382">output_tester_result</a> (int result, int number_test)</td></tr>
+<tr class="memdesc:aabedb7ddff66bcc84daf95acbd549382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to create wingow with result.  <br /></td></tr>
+<tr class="separator:aabedb7ddff66bcc84daf95acbd549382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd952befd2a71a82b9e0147e901cc5c4" id="r_afd952befd2a71a82b9e0147e901cc5c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd952befd2a71a82b9e0147e901cc5c4">output_tester_result_console</a> (int num_right[], int cnt_right, int num_wrong[], int cnt_wrong)</td></tr>
+<tr class="memdesc:afd952befd2a71a82b9e0147e901cc5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print result test in console.  <br /></td></tr>
+<tr class="separator:afd952befd2a71a82b9e0147e901cc5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+<a id="aabedb7ddff66bcc84daf95acbd549382" name="aabedb7ddff66bcc84daf95acbd549382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabedb7ddff66bcc84daf95acbd549382">&#9670;&#160;</a></span>output_tester_result()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
+          <td class="memname">void output_tester_result </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>number_test</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to create wingow with result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>result (-1 if wrong, 1 if right) </td></tr>
+    <tr><td class="paramname">number_test</td><td>number test with error (count test if all right) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd952befd2a71a82b9e0147e901cc5c4" name="afd952befd2a71a82b9e0147e901cc5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd952befd2a71a82b9e0147e901cc5c4">&#9670;&#160;</a></span>output_tester_result_console()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void output_tester_result_console </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_right</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cnt_right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_wrong</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cnt_wrong</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to print result test in console. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_right</td><td>massive with right test </td></tr>
+    <tr><td class="paramname">cnt_right</td><td>count right test </td></tr>
+    <tr><td class="paramname">num_wrong</td><td>massive with wrong test </td></tr>
+    <tr><td class="paramname">cnt_wrong</td><td>count wrong test </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

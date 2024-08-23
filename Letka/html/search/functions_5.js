@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solver_0',['solver',['../solver_8c.html#aa4d370b75a8309d180c57848e3e9880b',1,'solver.c']]]
+  ['run_5ftester_0',['run_tester',['../tester_8c.html#a9d58e88a41702a494bbef234428e58d2',1,'tester.c']]]
 ];
