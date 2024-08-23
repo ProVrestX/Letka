@@ -34,8 +34,12 @@ int main(int argc, char *argv[]) {
         if(test_result == -1) {
             num_wrong[cnt_wrong++] = number_test;
             if(num_test_wrong == 0) num_test_wrong = number_test;
+            printf("Wrong!\n");
         }
-        else if(test_result == 1) num_right[cnt_right++] = number_test;
+        else if(test_result == 1) {
+            num_right[cnt_right++] = number_test;
+            printf("Right!\n");
+        }
 
         if(file_input == NULL) break;
     }
